@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIT</title>
+    <style>
+        body {
+            background: #323232 url(img/bg.png);
+            color: #f2ecff;
+        }
+        .head1 {
+            border: 3px solid #00c896;
+            border-radius: 10px;
+            padding: 10px 20px;
+            background: #f2ecff;
+            color: #323232;
+            margin: 20px 75% -20px 20px;
+            position: relative;
+            z-index: 2;
+            font-family: monospace;
+            font-weight: 900;
+            font-size: 2em;
+        }
+        .textdiv {
+            border: 3px solid #00c896;
+            border-radius: 10px;
+            padding: 20px 20px 10px 20px;
+            background: #323232;
+            color: #f2ecff;
+            margin: -10px 20px 20px 30px;
+            position: relative;
+            z-index: 1;
+            font-family: helvetica, sans-serif;
+        }
+        img {
+            width: 10%;
+            float: right;
+            padding-left: 20px;
+        }
+        .head2 {
+            border: 3px solid #00c896;
+            border-radius: 10px;
+            padding: 10px 20px;
+            background: #f2ecff;
+            color: #323232;
+            margin: 20px auto -20px auto;
+            position: relative;
+            z-index: 2;
+            font-family: monospace;
+            font-weight: 900;
+            font-size: 2em;
+            text-align: center;
+            width: 20%
+        }
+        .codediv {
+            border: 3px solid #00c896;
+            border-radius: 10px;
+            padding: 20px 20px 10px 20px;
+            background: #323232;
+            color: #f2ecff;
+            margin: -10px 20px 20px 30px;
+            position: relative;
+            z-index: 1;
+            font-family: helvetica, sans-serif;
+            width: 40%;
+        }
+        .doc {
+            width: 80%;
+            float: none;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="head1">GIT</div>
+    <div class="textdiv">
+        <img src="img/git-icon.png" alt="GIT">
+        <h2>Så, hva er Git i et nøtteskall?</h2>
+        <p>Dette er en viktig del å forstå. Hvis du vet hva Git er og forstår det grunnleggende i hvordan det fungerer, blir det sannsynligvis mye enklere å bruke Git effektivt. Når du lærer Git, bør du prøve å legge til side det du kanskje vet om andre VCS-er, som CVS, Subversion eller Perforce. Det kan hjelpe deg med å unngå misforståelser når du bruker verktøyet. Selv om Git sitt user interface ligner på det man finner i disse andre VCS-ene, lagrer og behandler Git informasjon på en helt annen måte. Når du forstår disse forskjellene, blir Git enklere å bruke.</p>
+        <h2>Snapshots, ikke forskjeller</h2>
+        <p>Den største forskjellen mellom Git og andre VCS-er, inkludert Subversion og lignende systemer, er måten Git behandler data på. De fleste andre systemer lagrer informasjon som en liste over filbaserte endringer. Disse systemene, som CVS, Subversion og Perforce, ser på den lagrede informasjonen som en samling filer og endringene som blir gjort i hver fil over tid. Dette kalles vanligvis delta-based version control.</p>
+    </div>
+    <div class="head1">github.com</div>
+    <div class="textdiv">
+        <img src="img/github.png" alt="github.com">
+        <h2>Hva med GitHub?</h2>
+        <p>GitHub er en nettbasert tjeneste for version control med Git. Det er i praksis et sosialt nettverk for utviklere. Du kan se på koden til andre, finne issues i koden og foreslå endringer. Dette kan også hjelpe deg med å forbedre din egen kode. GitHub er dessuten et godt sted å vise fram prosjektene dine og bli lagt merke til av potensielle arbeidsgivere.</p>
+        <p><ul><li>Kort sagt er Git et Version Control System, mens GitHub er en hosting service for Git repositories.</li></ul></p>
+    </div>
+    <div class="head1">GIT bash</div>
+    <div class="textdiv">
+        <img src="img/git-bash.png" alt="git bash.com">
+        <h2>Hvor kommer Git Bash inn i bildet?</h2>
+        <p>Git Bash er en applikasjon for Microsoft Windows som gir et emulation layer for bruk av Git via command line. Bash er en forkortelse for Bourne Again Shell. Et shell er en terminalapplikasjon som brukes til å kommunisere med et operating system gjennom skriftlige commands. Bash er et populært standard-shell på Linux og macOS. Git Bash er en pakke som installerer Bash, noen vanlige Bash utilities og Git på Windows.</p>
+    </div>
+    <div class="head2">Code</div>
+    <div class="codediv" style="float: left;">
+        <h2>GIT commands</h2>
+        <ul>
+            <li>git init : initialiserer et nytt GIT-prosjekt</li>
+            <li>git add . : legger alle filer i gjeldende mappe klar for behandling</li>
+            <li>git commit –m «init» : lager et stopp-punkt med «message»</li>
+            <li>git push : sender prosjektet til github*</li>
+            <li>git pull : henter prosjektet fra github</li>
+            <li>git clone link : cloner et prosjekt fra github**</li>
+            <li>git branch v2 : ny versjon, tilsvarer «lagre som» men med alt innholdet</li>
+        </ul>
+        * første gangen må du presisere hvor den skal sende det:<br />
+        	&nbsp;&nbsp;&nbsp;git push --set-upstream https://github.com/konto/prosjekt master<br />
+        ** "link" erstattes med url til prosjektet (som i eksempelet over).
+    </div>
+    <div class="codediv" style="float: right;">
+        <h2>bash commands</h2>
+        <ul>
+            <li>pwd : print working directory – hvor er jeg*</li>
+            <li>ls : list – vis innhold i mappa</li>
+            <li>ls -al : vis alt innhold i langt format</li>
+            <li>cd navn : change directory – bytt mappe til navn**</li>
+            <li>cd .. : gå opp et nivå i mappestrukturen</li>
+            <li>mkdir : make directory – lag en ny mappe</li>
+            <li>code . : start VSCode med denne mappa som standard</li>
+            <li>[pil opp] : forrige kommando (historien)</li>
+        </ul>
+        * prompten viser også hvor du er<br />
+        ** dropper du navn kommer du til «hjem»-mappa di (~)
+    </div>
+    <br clear="all" />
+    <div class="head2">Images</div>
+    <div class="codediv" style="float: left;">
+        <h2>Wireframe</h2>
+        <img src="img/wf1.jpg" class="doc" alt=""><br />
+        <img src="img/wf2.jpg" class="doc" alt="">
+    </div>
+    <div class="codediv" style="float: right;">
+        <h2>Color palette</h2>
+        <img src="img/palette.png" class="doc" alt="">
+    </div>
+    <br clear="all" />
+    <div class="head1">AI</div>
+    <div class="textdiv">
+        <img src="img/brainzee_logo.jpg" alt="SOL">
+        <h2>Prompts jeg har brukt (i VS Code)?</h2>
+        <p>.textdiv havner foran .head1, hvorfor?<br />Jeg glemte "position: relative;" :-|</p>
+        <p>fra linje 100 i git.html, kan du flytte &lt;/li&gt; til slutten?</p>
+        <p>kan du gjøre det samme fra linje 111 til 118?</p>
+        <p>Teksten i .textdiv er på engelsk, kan du oversette til norsk? Behold fagbegrep på engelsk.</p>
+    </div>
+
+</body>
+</html>
