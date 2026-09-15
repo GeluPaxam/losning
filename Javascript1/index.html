@@ -61,7 +61,98 @@
     <button onclick="visMelding()">Trykk her!</button>
 
     <h1>Oppgave 7</h1>
+    <p>Se funksjon i oppgave 6 (melding.textContent)</p>
 
-    
+
+    <h1>Oppgave 8</h1>
+    <script>
+        function siHei(){
+            const navnInput = document.querySelector("#navn");
+            const heiMelding = document.querySelector("#outputNavn");
+            heiMelding.textContent = "AYO " + navnInput.value + "!";
+        }
+    </script>
+    <input type="text" id="navn">;
+    <button onclick="siHei()">Si hei</button>
+    <p id="outputNavn"></p>
+
+
+    <h1>Oppgave 9</h1>
+    <script>
+        function lagHilsen(navn){
+            let tekst = "hei " + navn + "!";
+            return tekst;
+        }
+        const oppg9Tekst = lagHilsen("ola");
+        console.log(oppg9Tekst);
+    </script>
+
+
+    <h1>Oppgave 10</h1>
+    <script>
+        function lagHilsen2(navn, alder){
+            console.log(typeof(alder));
+            let tekst = "hei " + navn + "!" + alder;
+            return tekst;
+        }
+        const oppg10Tekst = lagHilsen2("olga", 30);
+        console.log(oppg10Tekst);
+    </script>
+
+
+    <h1>Oppgave 11</h1>
+    <style>
+        .boks{ background-color: aqua; font-size: 1.2em; color: orange;}
+    </style>
+    <script>
+        function byttFarge(){
+            const boks = document.querySelector("#boks");
+            boks.style.backgroundColor = "yellow";
+            boks.style.fontSize = "1.4em";
+            boks.style.color = "darkgrey";
+        }
+    </script>
+    <div class="boks" id="boks">blablablablablalbablablablbla</div>
+    <button onclick="byttFarge()">Bytt farge</button>
+
+
+    <h1>Oppgave 12</h1>
+    <script>
+        let antallKlikk = 0;
+        function klikker(){
+            antallKlikk++;
+            const teller = document.querySelector("#teller");
+            teller.textContent = "Klikket " + antallKlikk + " ganger";
+        }
+    </script>
+    <button onclick="klikker()">Klikk</button>
+    <p id="teller">Klikk</p>
+
+
+    <h1>Oppgave 13</h1>
+    <script>
+        const nyElev = {
+            navn: "max", alder: 20, klasse: "2ITA", erElev: true,
+            presenter() {
+                return "jeg heter " + this.navn + " og g[r] i " + this.klasse + " klasse.";
+            }
+        }
+        console.log(typeof(nyElev));
+        console.log(nyElev);
+        console.log(nyElev.navn);
+    </script>
+
+
+    <h1>Oppgave 14</h1>
+    <script>
+        console.log(nyElev.presenter());
+    </script>
+
+
+    <h1>Oppgave 15</h1>
+    <script>
+        
+    </script>
+
 </body>
 </html>
