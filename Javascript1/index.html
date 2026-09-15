@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+    <style>
+        body{ background-color: beige; padding: 20px;}
+        h1 { color: blue; font-family: 'Times New Roman', Times, serif;}
+    </style>
+</head>
+<body>
+
+    <h1>Oppgave 1</h1>
+    <script>
+        let resultat = 0;
+        console.log (resultat);
+        resultat++;
+        console.log (resultat);
+    </script>
+
+    <p>se console -></p>
+    
+    <h1>Oppgave 2</h1>
+    <script>
+        const navn = "sigma";
+        console.log (navn);
+    </script>
+
+    <h1>Oppgave 3</h1>
+    <script>
+        const alder = 20;
+        const elev = true;
+        let tom;
+        console.log (typeof(navn));
+        console.log(typeof(alder));
+        console.log(typeof(elev));
+        console.log(typeof(tom));
+    </script>
+
+    <h1>Oppgave 4</h1>
+        <h2 id="melding">ingen melding enna</h2>
+    <script>
+        const melding = document.querySelector("#melding");
+        console.log(melding.innerHTML);
+    </script>
+
+    <h1>Oppgave 5</h1>
+    <script>
+        melding.textContent = "java saw here";
+        console.log(melding.textContent);
+    </script>
+
+    <h1>oppgave6</h1>
+    <script>
+        function visMelding(){
+            console.log("knappen ble trykket!");
+            melding.textContent = "du trykket pa knappen";
+        }
+    </script>
+    <button onclick="visMelding()">Trykk her!</button>
+
+    <h1>Oppgave 7</h1>
+
+    
+</body>
+</html>
