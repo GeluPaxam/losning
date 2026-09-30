@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>del 9,7</h1>
+
+<script>
+    const tall = [8, 3, 12, 7, 5];
+
+    for (let i = 0; i < tall.length; i++) {
+        for (let j = 0; j < tall.length; j++) {
+
+            if (tall[i] < tall[j]) {
+                let temp = tall[i];
+                tall[i] = tall[j];
+                tall[j] = temp;
+            }
+
+        }
+    }
+
+    console.log(tall);
+</script>
+</body>
+</html>
