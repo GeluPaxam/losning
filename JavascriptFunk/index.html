@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>1</h2>
+    <script>
+        function siHei(){
+            console.log("Hei");
+        }
+        siHei();
+    </script>
+
+    <h2>2</h2>
+    <script>
+        for(i=0;i<3;i++){
+            siHei();
+        }
+    </script>
+
+    <h2>3</h2>
+    <script>
+        function siHei3(navn){
+            console.log("Hei " + navn);
+        }
+        siHei3("Ola");
+    </script>
+    
+    <h2>4</h2>
+    <script>
+        function presenter4(navn, alder){
+            console.log(navn + " " + alder + " ar");
+        }
+        presenter4("Sigma", 228)
+    </script>
+
+    <h2>5</h2>
+    <script>
+        function funk5(navn){
+            return "hei " + navn + " !";
+        }
+        console.log(funk5("Per"));
+    </script>
+
+
+    <h2>6</h2>
+    <script>
+        function rop6(tekst){
+            return tekst.toUpperCase();
+        }
+        console.log(rop6("Hei"));
+    </script>
+
+    <h2>7</h2>
+    <script>
+        function rop7(tekst){
+            return tekst.toLowerCase();
+        }
+        console.log(rop7("Hei"));
+    </script>
+
+    <h2>8</h2>
+    <script>
+        function tellTegn8(tekst){
+            console.log(tekst.length);
+        }
+        tellTegn8("SixSeven");
+    </script>
+
+    <h2>9</h2>
+    <script>
+        function bok9(tekst){
+            console.logt(tekst[0]);
+        }
+        bok9("Programmering");
+    </script>
+
+
+
+</body>
+</html>
