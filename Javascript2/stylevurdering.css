@@ -1,0 +1,154 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root { /* liksom cache`ing farger i gLua*/
+  --background: #10120f;
+  --panel: #191c17;
+  --text: #e8e9df;
+  --muted: #999f91;
+  --accent: #a8f078;
+  --line: #343a30;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+header,
+main,
+footer {
+  width: min(1050px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+header {
+  padding: 48px 0 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.label,
+h2 {
+  color: var(--accent);
+  font-family: monospace;
+  font-size: 0.8rem;
+}
+
+h1 {
+  margin: 12px 0;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  letter-spacing: -3px;
+}
+
+h1 span {
+  color: var(--accent);
+}
+
+.intro,
+small {
+  color: var(--muted);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin-top: 28px;
+}
+
+a {
+  color: var(--text);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+
+.quick-start,
+.command-grid section {
+  padding: 20px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.quick-start {
+  margin: 28px 0 16px;
+}
+
+pre,
+code {
+  font-family: monospace;
+}
+
+pre {
+  overflow-x: auto;
+  color: var(--accent);
+  line-height: 1.8;
+}
+
+.command-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+h2 {
+  display: flex;
+  gap: 12px;
+  margin: 0 0 20px;
+  font-size: 1.15rem;
+}
+
+.command-grid p {
+  margin: 16px 0 0;
+}
+
+.command-grid code {
+  display: block;
+  color: var(--accent);
+  overflow-wrap: anywhere;
+}
+
+small {
+  display: block;
+  margin-top: 4px;
+}
+
+aside {
+  margin: 20px 0 40px;
+  padding: 16px 20px;
+  border-left: 3px solid #e9bf70;
+  background: #201d15;
+  color: var(--muted);
+}
+
+aside strong {
+  color: #e9bf70;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0 30px;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 650px) {
+  header,
+  main,
+  footer {
+    width: calc(100% - 28px);
+  }
+
+  .command-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Manual</title>
+  <link rel="stylesheet" href="stylevurdering.css">
+</head>
+<body>
+  <header>
+    <h1>Git Field Manual</h1>
+    <p class="intro">A simple reference for everyday Git commands.</p>
+
+    <nav>
+      <a href="#start">Start</a>
+      <a href="#inspect">Inspect</a>
+      <a href="#save">Save</a>
+      <a href="#remote">Remote</a>
+      <a href="#branches">Branches</a>
+      <a href="#recover">Recover</a>
+      <a href="#advanced">Advanced</a>
+      <a href="#extra">Extra</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="quick-start">
+        <p class="label">QUICK START</p>
+        <pre><code>
+            git status
+            git add .
+            git commit -m "Update"
+            git push
+        </code></pre>
+    </section>
+
+    <div class="command-grid">
+        <section id="start">
+            <h2>Get started</h2>
+            <p><code>git --version</code><small>Check Git version.</small></p>
+            <p><code>git config --global user.name "Name"</code><small>Set your username.</small></p>
+            <p><code>git config --global user.email "you@example.com"</code><small>Set your email.</small></p>
+            <p><code>git clone &lt;url&gt;</code><small>Copy a repository.</small></p>
+            <p><code>git init</code><small>Create a repository.</small></p>
+        </section>
+
+        <section id="inspect">
+            <h2>Inspect changes</h2>
+            <p><code>git status</code><small>See current changes.</small></p>
+            <p><code>git diff</code><small>View unstaged changes.</small></p>
+            <p><code>git diff --staged</code><small>View staged changes.</small></p>
+            <p><code>git log --oneline</code><small>View commit history.</small></p>
+            <p><code>git remote -v</code><small>List remote repositories.</small></p>
+        </section>
+
+        <section id="save">
+            <h2>Save your work</h2>
+            <p><code>git add &lt;file&gt;</code><small>Stage one file.</small></p>
+            <p><code>git add .</code><small>Stage changes in the current directory.</small></p>
+            <p><code>git add -p</code><small>Choose changes to stage.</small></p>
+            <p><code>git commit -m "Message"</code><small>Create a commit.</small></p>
+            <p><code>git restore &lt;file&gt;</code><small>Discard unstaged changes to a file.</small></p>
+        </section>
+
+        <section id="remote">
+            <h2>Work with remotes</h2>
+            <p><code>git pull</code><small>Download and integrate changes.</small></p>
+            <p><code>git push</code><small>Upload your commits.</small></p>
+            <p><code>git fetch</code><small>Download remote updates.</small></p>
+            <p><code>git remote add origin &lt;url&gt;</code><small>Add a remote repository.</small></p>
+            <p><code>git push -u origin main</code><small>Push main and set upstream.</small></p>
+        </section>
+
+        <section id="branches">
+            <h2>Branch out</h2>
+            <p><code>git branch</code><small>List local branches.</small></p>
+            <p><code>git switch -c &lt;name&gt;</code><small>Create and switch to a branch.</small></p>
+            <p><code>git switch main</code><small>Switch to main.</small></p>
+            <p><code>git merge &lt;branch&gt;</code><small>Merge another branch.</small></p>
+            <p><code>git branch -d &lt;name&gt;</code><small>Delete a merged branch.</small></p>
+        </section>
+
+        <section id="recover">
+            <h2>Recover and revise</h2>
+            <p><code>git restore --staged &lt;file&gt;</code><small>Unstage a file.</small></p>
+            <p><code>git commit --amend</code><small>Edit the last commit.</small></p>
+            <p><code>git stash</code><small>Temporarily save working changes.</small></p>
+            <p><code>git stash pop</code><small>Restore stashed changes.</small></p>
+            <p><code>git revert &lt;hash&gt;</code><small>Reverse a commit safely with a new commit.</small></p>
+        </section>
+
+        <section id="advanced">
+            <h2>Advanced moves</h2>
+            <p><code>git cherry-pick &lt;hash&gt;</code><small>Apply a specific commit.</small></p>
+            <p><code>git rebase main</code><small>Reapply commits on top of main.</small></p>
+            <p><code>git reflog</code><small>View recent HEAD movements.</small></p>
+            <p><code>git blame &lt;file&gt;</code><small>See who changed each line.</small></p>
+            <p><code>git bisect start</code><small>Start searching for a bug.</small></p>
+        </section>
+
+        <section id="extra">
+            <h2>Useful extras</h2>
+            <p><code>git show &lt;hash&gt;</code><small>Inspect a commit.</small></p>
+            <p><code>git branch -a</code><small>List all branches.</small></p>
+            <p><code>git rm --cached &lt;file&gt;</code><small>Untrack a file but keep it locally.</small></p>
+            <p><code>git help &lt;command&gt;</code><small>Read command help.</small></p>
+        </section>
+    </div>
+
+        <aside>
+            <strong>Careful:</strong> Some commands can discard changes or rewrite history. Check your status before running unfamiliar commands.
+        </aside>
+    </main>
+
+    <footer>
+        <a href="https://git-scm.com/docs">Official Git documentation ↗</a>
+    </footer>
+</body>
+</html>
