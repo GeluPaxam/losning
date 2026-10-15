@@ -73,10 +73,33 @@
     <h2>9</h2>
     <script>
         function bok9(tekst){
-            console.logt(tekst[0]);
+            console.log(tekst[0]);
         }
         bok9("Programmering");
     </script>
+
+
+    <h2>11</h2>
+    <script>
+        function elevInfo11(navn, klasse){
+            console.log(`${navn} gar i klasse ${klasse}`);
+        }
+        elevInfo11("Ola", "2ITA");
+    </script>
+
+
+    <H2>12</H2>
+    <script>
+        function siHei12(){
+            const navn = document.querySelector("#navnInput12");
+            const resultat = document.querySelector("#resultat12");
+
+            resultat.innerHTML = `Hei ${navn.value} !`;
+        }
+    </script>
+    <input type="text" id="navnInput12">
+    <button onclick="siHei12()">Si hei</button>
+    <div id="resultat12"></div>
 
 
 
