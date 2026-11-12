@@ -3,16 +3,17 @@ const color = {red: "#ff0000ff", yellow: "#eeff00ff", green: "#008917ff", legend
 let PoloskaDLaCvetov = false;
 const PasswordInput = document.getElementById("passwordID");
 const Poloska = document.getElementById("Poloska");
-
+/** variabler som får verdier fra html */
 PasswordInput.addEventListener("input", PasswordCheck);
-
+/**gjør at funksjon"passwordcheck" kjøres hver gang input er endret */
 function ScoreMath(){
     let score = 0;
+    /**starter score på 0 hver runde */
     let password = PasswordInput.value;
     if (password.length >= 8) {
         score += 1;
     }
-    if (password.length >= 12){
+    if (password.length >= 16){
         score += 1;
     }
     if (password != password.toLowerCase()) {
@@ -40,8 +41,10 @@ function ScoreMath(){
             score += 1;
             break;
         }
+        /**break gjører at loop stoper etter først riktig runde */
     }
     return score;
+    /**vi returnerer så vi bruker det senere i koden */
 }
 
 function PasswordCheck(){
@@ -60,4 +63,5 @@ function PasswordCheck(){
     else{
         Poloska.style.backgroundColor = color.legend;
     }
+    /**alle if-er bytter farger */
 }
