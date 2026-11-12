@@ -93,7 +93,7 @@
     <script>
         function sjekkBillet5(){
             const alder = document.querySelector("#alder5").value;
-            const billet = document.querySelector("#billet5").cheked;
+            const billet = document.querySelector("#billet5").checked;
             console.log(alder + " og " + billet);
 
             if(alder >= 16 && billet == true){
@@ -107,5 +107,54 @@
     <input type="text" id="alder5"><br>
     <input type="checkbox" id="billet5" placeholder="Har du billet?"><br>
     <button onclick="sjekkBillet5()">Sjekk</button>
+
+
+    <h1>del 6</h1>
+    <script>
+        function sjekkTilgang6(){
+            const elev = document.querySelector("#elev6").checked;
+            const larer = document.querySelector("#larer6").checked;
+            const resultat = document.querySelector("#resultat6");
+
+            if ((elev == true || larer == true) && elev != larer){
+                resultat.innerHTML = "Du har tilgang";
+            }
+            else{
+                resultat.innerHTML = "Du har IKKE tilgang";
+            }
+
+        }
+    </script>
+    <input type="checkbox" id="elev6"> Elev<br>
+    <input type="checkbox" id="larer6"> Larer<br>
+    <button onclick="sjekkTilgang6()">Sjekk</button>
+    <p id="resultat6"></p>
+
+    <h1>del 7</h1>
+    <script>
+        function sjekkDag7(){
+            const dag = document.querySelector("#ukeDag7").value;
+            const resultat = document.querySelector("#resultat7");
+            resultat.innerHTML = dag;
+        }
+    </script>
+    <select name="ukeDag7" id="ukeDag7" onchange="sjekkDag7">
+        <option value="0">Mandag</option>
+        <option value="1">Tirsdag</option>
+        <option value="2">Onsdag</option>
+        <option value="3">Torsdag</option>
+        <option value="4">Fredag</option>
+        <option value="5">lordag</option>
+        <option value="6">Sondag</option>
+    </select>
+    <p id="resultat7"></p>
+
+
+    <h1>del 8</h1>
+    <script>
+        for(let i = 0; i >= 10; i++){
+            console.log(i);
+        }
+    </script>
 </body>
 </html>

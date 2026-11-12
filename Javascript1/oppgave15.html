@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opp15</title>
+    <style>
+        body{background-color: beige; padding: 30px;}
+    </style>
+</head>
+<body>
+
+    <h1>Ny-elev</h1>
+    <h2>Navn</h2>
+    <input id="navn">
+    <h2>klasse</h2>
+    <input id="klasse">
+    <h2>alder</h2>
+    <input id="alder">
+
+    <br>
+    <button id="ny">Create</button>
+
+
+    <div id="kort">
+        <h3>Elevkort</h3>
+        <p>Navn:<span id="visNavn"></span></p>
+        <p>Klasse:<span id="visKlasse"></span></p>
+        <p>Alder:<span id="visAlder"></span></p>
+
+        <p id="pres"></p>
+    </div>
+
+
+    <script>
+        document.getElementById("ny").addEventListener("click", function() { //jeg gjorde det som i GLua XD
+            const navn = document.getElementById("navn").value;
+            const alder = document.getElementById("alder").value;
+            const klasse = document.getElementById("klasse").value;
+            const elev = {
+                navn: navn, alder: alder, klasse: klasse,
+
+                presenter: function(){
+                    return this.navn + " 21 " + this.klasse + "32" + this.alder;
+                }
+            };
+
+            document.getElementById("visNavn").textContent = elev.navn; // dette tar element som har visNavn(som har ikke noe inholdet) id og gi inholdet som er i const elev som tar det fra inputet
+            document.getElementById("visAlder").textContent = elev.alder;
+            document.getElementById("visKlasse").textContent = elev.klasse;
+            document.getElementById("pres").textContent = elev.presenter();
+    });
+    </script>
+</body>
+</html>
